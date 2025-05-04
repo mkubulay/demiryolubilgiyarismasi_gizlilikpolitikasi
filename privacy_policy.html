@@ -15,8 +15,23 @@
     header {
       background-color: #005b96;
       color: white;
-      padding: 20px 0;
       text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+    .header-content img {
+      width: 40px;
+      height: 40px;
+    }
+    .header-content h1 {
+      margin: 0;
+      font-size: 24px;
     }
     main {
       max-width: 800px;
@@ -26,7 +41,7 @@
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-    h1, h2 {
+    h2 {
       color: #005b96;
     }
     a {
@@ -50,7 +65,10 @@
 </head>
 <body>
   <header>
-    <h1>Gizlilik Politikası / Privacy Policy</h1>
+    <div class="header-content">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/train.png" alt="Tren İkonu" />
+      <h1>Demir Yolu Bilgi Yarışması</h1>
+    </div>
   </header>
 
   <main>
