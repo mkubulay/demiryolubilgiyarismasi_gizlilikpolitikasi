@@ -4,39 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gizlilik Politikası - Demir Yolu Bilgi Yarışması</title>
-  <link rel="icon" href="https://img.icons8.com/ios-filled/50/005b96/train.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://img.icons8.com/ios-filled/50/005b96/train.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
       background: url("background_trainnn.png") no-repeat center center fixed;
       background-size: cover;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
     }
 
-    .overlay {
-      background-color: rgba(255, 255, 255, 0.93);
+    .glass {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       max-width: 900px;
-      margin: 40px auto;
-      padding: 30px 25px;
+      width: 95%;
+      padding: 40px 30px;
+      margin: 40px 20px;
       border-radius: 16px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
     h1 {
       text-align: center;
+      font-size: 28px;
       color: #005b96;
-      margin-top: 0;
+      margin-bottom: 20px;
     }
 
     h2 {
       color: #005b96;
-      margin-top: 25px;
+      margin-top: 30px;
+      font-size: 20px;
     }
 
     p {
-      color: #333;
       font-size: 15px;
       line-height: 1.6;
     }
@@ -50,21 +64,47 @@
       text-decoration: underline;
     }
 
-    footer {
-      text-align: center;
-      color: #666;
-      margin-top: 40px;
-      font-size: 0.9em;
-    }
-
     .divider {
       margin: 40px 0;
       border-top: 1px solid #ccc;
     }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .youtube-icon {
+      margin-top: 10px;
+    }
+
+    .youtube-icon a {
+      display: inline-block;
+    }
+
+    .youtube-icon img {
+      width: 32px;
+      height: 32px;
+      filter: drop-shadow(0 0 2px rgba(0,0,0,0.3));
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 22px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      .glass {
+        padding: 25px 20px;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="overlay">
+  <div class="glass">
     <h1>Demir Yolu Bilgi Yarışması - Gizlilik Politikası</h1>
 
     <p><strong>Demir Yolu Bilgi Yarışması</strong> adlı mobil uygulama, kullanıcıların gizliliğine önem verir. Bu uygulamayı kullanarak aşağıdaki şartları kabul etmiş olursunuz.</p>
@@ -93,7 +133,7 @@
 
     <div class="divider"></div>
 
-    <h1>Privacy Policy (English)</h1>
+    <h1>Privacy Policy</h1>
 
     <p><strong>Demir Yolu Bilgi Yarışması</strong> is a mobile application that respects your privacy. By using this app, you agree to the following terms:</p>
 
@@ -101,7 +141,7 @@
     <p>This application does not collect, process, or store any personal data from users.</p>
 
     <h2>2. Third-Party Ads</h2>
-    <p>The app may show advertisements from third-party ad providers (such as Google AdMob). These services may use device identifiers to serve relevant ads.</p>
+    <p>This app may show advertisements from third-party ad providers (such as Google AdMob). These services may use device identifiers to deliver relevant ads.</p>
     <p>More info: <a href="https://policies.google.com/technologies/ads" target="_blank">Google Ads Privacy Policy</a></p>
 
     <h2>3. Security</h2>
@@ -119,9 +159,14 @@
     <h2>7. Terms of Use</h2>
     <p>By downloading and using this app, you agree to the terms described in this privacy policy.</p>
 
-    <footer>
+    <div class="footer">
       &copy; 2025 Demir Yolu Bilgi Yarışması
-    </footer>
+      <div class="youtube-icon">
+        <a href="https://www.youtube.com/@trenvideolari" target="_blank" title="YouTube">
+          <img src="https://img.icons8.com/ios-filled/50/ff0000/youtube-play.png" alt="YouTube">
+        </a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
