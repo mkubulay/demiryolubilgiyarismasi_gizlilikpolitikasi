@@ -51,7 +51,6 @@
       border-radius: 12px;
       padding: 10px;
     }
-    .youtube-icon { margin-top: 10px; }
     .youtube-icon img { width: 32px; height: 32px; filter: drop-shadow(0 0 2px rgba(0,0,0,0.3)); }
     .youtube-caption { font-size: 0.8em; color: #333; margin-top: 5px; }
     .lang-toggle { text-align: center; margin-bottom: 30px; }
@@ -67,24 +66,20 @@
     .lang-toggle button:hover { background-color: #003f6b; }
     .section { display: none; }
     .section.active { display: block; }
-    #scrollTopBtn {
-      position: fixed; bottom: 20px; right: 20px; display: none;
-      background-color: #005b96; color: white;
-      border: none; padding: 10px 14px;
-      border-radius: 50%; font-size: 16px;
-      cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.3); z-index: 999;
-    }
-    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
   </style>
 </head>
 <body>
-<div id="loader" style="position:fixed;top:0;left:0;width:100%;height:100%;background-color:#fff;display:flex;align-items:center;justify-content:center;z-index:9999;">
-  <div style="border:4px solid #f3f3f3;border-top:4px solid #005b96;border-radius:50%;width:40px;height:40px;animation:spin 1s linear infinite;"></div>
-</div>
 <div class="glass">
   <div class="lang-toggle">
     <button onclick="switchLang('tr')">Türkçe</button>
     <button onclick="switchLang('en')">English</button>
+  </div>
+
+  <div style="text-align:center;margin-bottom:20px;">
+    <a href="https://www.youtube.com/@trenvideolari" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/ff0000/youtube-play.png" alt="YouTube">
+      <p style="font-size:16px;color:#005b96;font-weight:bold;">Tren Videoları YouTube Kanalı</p>
+    </a>
   </div>
 
   <div id="tr" class="section active">
@@ -103,29 +98,13 @@
     <p><a href="mailto:mkubulay71@yandex.com">📧 Bize Ulaşın</a></p>
   </div>
 
-  <div id="en" class="section">
-    <h1>Railway Quiz - Privacy Policy</h1>
-    <p><strong>Railway Quiz</strong> is a user-friendly mobile application that respects and protects the personal privacy of its users.</p>
-    <h2>1. Data Collection</h2>
-    <p>This application does not collect, process, or store any personal data from its users.</p>
-    <h2>2. Third-Party Advertisements</h2>
-    <p>The application may display advertisements provided by reputable third-party ad services like Google AdMob. These ads might use device information from users.</p>
-    <h2>3. Security</h2>
-    <p>As the application does not collect personal data, there is no risk to user information security.</p>
-    <h2>4. Changes</h2>
-    <p>This privacy policy may be updated occasionally. Any changes will be announced on this page.</p>
-    <h2>5. Contact</h2>
-    <p>You can contact us by clicking the following link to send us an email. If the link doesn't work, our email address is mkubulay71@yandex.com.</p>
-    <p><a href="mailto:mkubulay71@yandex.com">📧 Contact Us</a></p>
-  </div>
-
 <div class="footer">
-    <p style="margin-top:10px;text-align:center;">© 2025 Demir Yolu Bilgi Yarışması ve <a href="https://www.youtube.com/@trenvideolari" target="_blank">Tren Videoları YouTube kanalı</a></p>
-  </div>
+  <p>© 2025 Demir Yolu Bilgi Yarışması</p>
+</div>
+
 </div>
 <script>
   function switchLang(lang){document.querySelectorAll('.section').forEach(el=>el.classList.remove('active'));document.getElementById(lang).classList.add('active');}
-  window.onload=function(){document.getElementById('loader').style.display='none';}
 </script>
 </body>
 </html>
