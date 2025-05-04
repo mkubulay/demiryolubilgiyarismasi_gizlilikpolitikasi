@@ -5,20 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gizlilik Politikası - Demir Yolu Bilgi Yarışması</title>
   <link rel="icon" href="https://img.icons8.com/ios-filled/50/005b96/train.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
       color: #333;
+      transition: background-color 0.3s, color 0.3s;
     }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #121212;
+        color: #e0e0e0;
+      }
+      main {
+        background-color: #1e1e1e;
+      }
+      header {
+        background-color: #1a73e8;
+      }
+      a {
+        color: #90caf9;
+      }
+      footer {
+        color: #999;
+      }
+    }
+
     header {
       background-color: #005b96;
       color: white;
       text-align: center;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
+
     .header-content {
       display: flex;
       align-items: center;
@@ -26,14 +49,17 @@
       gap: 15px;
       padding: 20px;
     }
+
     .header-content img {
       width: 40px;
       height: 40px;
     }
+
     .header-content h1 {
       margin: 0;
       font-size: 24px;
     }
+
     main {
       max-width: 800px;
       margin: 30px auto;
@@ -42,22 +68,42 @@
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
+
     h2 {
       color: #005b96;
     }
+
     a {
       color: #005b96;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     footer {
       text-align: center;
       font-size: 0.9em;
-      margin-top: 30px;
+      margin: 30px 0 10px;
       color: #777;
     }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+    }
+
     .divider {
       margin: 40px 0;
       border-top: 1px solid #ccc;
@@ -115,6 +161,14 @@
 
   <footer>
     &copy; 2025 Demir Yolu Bilgi Yarışması
+    <div class="social-icons">
+      <a href="https://www.youtube.com/@trenvideolari" target="_blank" title="YouTube">
+        <img src="https://img.icons8.com/ios-filled/50/005b96/youtube-play.png" alt="YouTube">
+      </a>
+      <a href="https://yourwebsite.com" target="_blank" title="Web Sitesi">
+        <img src="https://img.icons8.com/ios-filled/50/005b96/domain.png" alt="Web Site">
+      </a>
+    </div>
   </footer>
 </body>
 </html>
