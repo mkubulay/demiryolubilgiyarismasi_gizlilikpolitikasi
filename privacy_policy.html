@@ -25,13 +25,27 @@
       flex-direction: column;
     }
 
+    header {
+      width: 100%;
+      background-color: #005b96cc;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
     .glass {
       background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       max-width: 900px;
       width: 95%;
-      padding: 40px 30px;
+      padding: 80px 30px 40px; /* header boşluğu için üst padding artırıldı */
       margin: 40px 20px;
       border-radius: 16px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -80,6 +94,9 @@
       margin-top: 20px;
       font-size: 0.9em;
       color: #555;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 12px;
+      padding: 10px;
     }
 
     .youtube-icon {
@@ -94,6 +111,12 @@
       width: 32px;
       height: 32px;
       filter: drop-shadow(0 0 2px rgba(0,0,0,0.3));
+    }
+
+    .youtube-caption {
+      font-size: 0.8em;
+      color: #333;
+      margin-top: 5px;
     }
 
     .lang-toggle {
@@ -117,9 +140,29 @@
 
     .section { display: none; }
     .section.active { display: block; }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      background-color: #005b96;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 50%;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
   </style>
 </head>
 <body>
+  <header>
+    🚆 Demir Yolu Bilgi Yarışması
+  </header>
+
   <div class="glass">
     <div class="lang-toggle">
       <button onclick="switchLang('tr')">Türkçe</button>
@@ -170,15 +213,27 @@
         <a href="https://www.youtube.com/@trenvideolari" target="_blank">
           <img src="https://img.icons8.com/ios-filled/50/ff0000/youtube-play.png" alt="YouTube" />
         </a>
+        <div class="youtube-caption">Resmî YouTube Kanalımız</div>
       </div>
       <p style="margin-top: 10px; font-weight: 600;">© 2025 Demir Yolu Bilgi Yarışması</p>
     </div>
   </div>
 
+  <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
   <script>
     function switchLang(lang) {
       document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
       document.getElementById(lang).classList.add('active');
+    }
+
+    window.onscroll = function () {
+      const btn = document.getElementById("scrollTopBtn");
+      btn.style.display = document.documentElement.scrollTop > 100 ? "block" : "none";
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
 </body>
