@@ -193,7 +193,8 @@
       <p>By downloading and using this app, you agree to the terms described in this privacy policy.</p>
     </div>
 
-    <div class="footer">
+    <div id="datetime" style="text-align: center; margin-top: 20px; font-size: 0.9em; color: #333;"></div>
+$1
       <a href="index.html">Ana Sayfaya Dön</a>
       <div class="youtube-icon">
         <a href="https://www.youtube.com/@trenvideolari" target="_blank">
@@ -225,6 +226,15 @@
   window.addEventListener('load', function () {
   document.getElementById('loader').style.display = 'none';
 });
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const time = now.toLocaleTimeString('tr-TR');
+  const date = now.toLocaleDateString('tr-TR', options);
+  document.getElementById('datetime').innerText = date + ' - ' + time;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
 </script>
 </body>
 </html>
