@@ -57,9 +57,8 @@
     }
     .youtube-icon img { width: 32px; height: 32px; filter: drop-shadow(0 0 2px rgba(0,0,0,0.3)); }
     .lang-toggle {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 30px;
+      text-align: center;
+      margin-top: 30px;
     }
     .lang-toggle button {
       background-color: #005b96;
@@ -78,27 +77,19 @@
       h2 { font-size: 18px; }
       .lang-toggle button { padding: 6px 12px; display: block; margin: 5px auto; }
       .lang-toggle { text-align: center; display: flex; flex-direction: column; align-items: center; }
-      .glass > div[style*="display: flex"] {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
-      .glass img[alt="Train Logo"] {
-        margin: 0;
-      }
     }
   </style>
 </head>
 <body>
   <div class="glass" style="text-align:center; margin-bottom:20px; margin-top:10px; z-index:999; position:relative;">
-    <!-- Arama butonu kaldırıldı -->
+    <h1>Demir Yolu Bilgi Yarışması - Gizlilik Politikası</h1>
+    <!-- Dil Seçim Butonları Buraya Alındı -->
     <div class="lang-toggle">
       <button onclick="switchLang('tr')">Türkçe</button>
       <button onclick="switchLang('en')">English</button>
     </div>
   </div>
   <div id="en" class="section" style="background-color:white; padding:30px; border-radius:16px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
-    <h1>Railway Quiz - Privacy Policy</h1>
     <p><strong>Railway Quiz</strong> is a user-friendly mobile application that respects and protects the personal privacy of its users.</p>
     <h2>1. Data Collection</h2>
     <p>This application does not collect, process, or store any personal data from its users.</p>
@@ -114,7 +105,6 @@
   </div>
 
   <div id="tr" class="section active" style="background-color:white; padding:30px; border-radius:16px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
-    <h1>Demir Yolu Bilgi Yarışması - Gizlilik Politikası</h1>
     <p><strong>Demir Yolu Bilgi Yarışması</strong>, kullanıcılarının kişisel gizliliğini koruyan, kullanıcı dostu bir mobil uygulamadır.</p>
     <h2>1. Veri Toplama</h2>
     <p>Uygulama, kullanıcılarından herhangi bir kişisel veri toplamaz, işlemez veya saklamaz.</p>
