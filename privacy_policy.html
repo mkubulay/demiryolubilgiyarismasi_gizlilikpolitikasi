@@ -86,6 +86,7 @@
     <button onclick="switchLang('tr')">Türkçe</button>
     <button onclick="switchLang('en')">English</button>
   </div>
+
   <div id="tr" class="section active">
     <h1>Demir Yolu Bilgi Yarışması - Gizlilik Politikası</h1>
     <p><strong>Demir Yolu Bilgi Yarışması</strong>, kullanıcılarının kişisel gizliliğini koruyan, kullanıcı dostu bir mobil uygulamadır.</p>
@@ -98,38 +99,30 @@
     <h2>4. Değişiklikler</h2>
     <p>Bu gizlilik politikası zaman zaman güncellenebilir. Yapılan değişiklikler bu sayfada ilan edilecektir.</p>
     <h2>5. İletişim</h2>
+    <p>Bağlantıya tıklayarak bize mail gönderebilirsiniz, bağlantı çalışmazsa mail adresimiz mkubulay71@yandex.com.</p>
     <p><a href="mailto:mkubulay71@yandex.com">📧 Bize Ulaşın</a></p>
   </div>
-  <\/div><div id="en" class="section">
-    <h1>Railway Quiz - Privacy Policy<\/h1>
-    <p><strong>Railway Quiz<\/strong> is a user-friendly mobile application that respects and protects the personal privacy of its users.<\/p>
-    <h2>1. Data Collection<\/h2>
-    <p>This application does not collect, process, or store any personal data from its users.<\/p>
-    <h2>2. Third-Party Advertisements<\/h2>
-    <p>The application may display advertisements provided by reputable third-party ad services like Google AdMob. These ads might use device information from users.<\/p>
-    <h2>3. Security<\/h2>
-    <p>As the application does not collect personal data, there is no risk to user information security.<\/p>
-    <h2>4. Changes<\/h2>
-    <p>This privacy policy may be updated occasionally. Any changes will be announced on this page.<\/p>
-    <h2>5. Contact<\/h2>
-    <p>You can contact us by clicking the following link to send us an email. If the link doesn't work, our email address is mkubulay71@yandex.com.<\/p>
-    <p><a href=\"mailto:mkubulay71@yandex.com\">📧 Contact Us<\/a><\/p>
-  <\/div>$1<div class=\"footer\">
-    <a href="index.html">Ana Sayfaya Dön</a>
-    <div class="youtube-icon">
-      <a href="https://www.youtube.com/@trenvideolari" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/50/ff0000/youtube-play.png" alt="YouTube">
-      </a>
-      <div class="youtube-caption">Resmî YouTube Kanalımız</div>
-    </div>
-    <p>© 2025 Demir Yolu Bilgi Yarışması</p>
+
+  <div id="en" class="section">
+    <h1>Railway Quiz - Privacy Policy</h1>
+    <p><strong>Railway Quiz</strong> is a user-friendly mobile application that respects and protects the personal privacy of its users.</p>
+    <h2>1. Data Collection</h2>
+    <p>This application does not collect, process, or store any personal data from its users.</p>
+    <h2>2. Third-Party Advertisements</h2>
+    <p>The application may display advertisements provided by reputable third-party ad services like Google AdMob. These ads might use device information from users.</p>
+    <h2>3. Security</h2>
+    <p>As the application does not collect personal data, there is no risk to user information security.</p>
+    <h2>4. Changes</h2>
+    <p>This privacy policy may be updated occasionally. Any changes will be announced on this page.</p>
+    <h2>5. Contact</h2>
+    <p>You can contact us by clicking the following link to send us an email. If the link doesn't work, our email address is mkubulay71@yandex.com.</p>
+    <p><a href="mailto:mkubulay71@yandex.com">📧 Contact Us</a></p>
   </div>
+
 </div>
 <script>
   function switchLang(lang){document.querySelectorAll('.section').forEach(el=>el.classList.remove('active'));document.getElementById(lang).classList.add('active');}
   window.onload=function(){document.getElementById('loader').style.display='none';}
-  function updateDateTime(){let now=new Date();document.getElementById('datetime').innerText=now.toLocaleString('tr-TR');}
-  setInterval(updateDateTime,1000);updateDateTime();
 </script>
 </body>
 </html>
