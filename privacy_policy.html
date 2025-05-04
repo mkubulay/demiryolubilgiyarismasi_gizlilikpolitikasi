@@ -74,7 +74,10 @@
   </style>
 </head>
 <body>
-<div class="glass">
+
+  <div style="text-align:right; margin-bottom:10px;">
+    <input type="text" id="searchInput" placeholder="Başlık ara..." style="padding: 6px 12px; border-radius: 6px; border: 1px solid #ccc;">
+  </div>
   <div class="lang-toggle">
     <button onclick="switchLang('tr')">Türkçe</button>
     <button onclick="switchLang('en')">English</button>
@@ -124,6 +127,19 @@
 </div>
 <script>
   function switchLang(lang){document.querySelectorAll('.section').forEach(el=>el.classList.remove('active'));document.getElementById(lang).classList.add('active');}
+</script>
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
+    document.getElementById(lang).classList.add('active');
+  }
+  
+  document.getElementById('searchInput').addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    document.querySelectorAll('.section.active h2').forEach(h => {
+      h.style.backgroundColor = h.textContent.toLowerCase().includes(query) ? '#ffffcc' : 'transparent';
+    });
+  });
 </script>
 </body>
 </html>
