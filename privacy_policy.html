@@ -75,6 +75,19 @@
       .glass { padding: 20px 15px; }
       h1 { font-size: 24px; }
       h2 { font-size: 18px; }
+      .lang-toggle button { padding: 6px 12px; display: block; margin: 5px auto; }
+      .lang-toggle { text-align: center; display: flex; flex-direction: column; align-items: center; }
+      .glass > div[style*="display: flex"] {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      .glass img[alt="Train Logo"] {
+        margin: 0;
+      }
+    }
+      h1 { font-size: 24px; }
+      h2 { font-size: 18px; }
       .lang-toggle button { padding: 6px 12px; }
     }
   </style>
@@ -84,12 +97,15 @@
   <div style="text-align:center; margin-bottom:20px; margin-top:10px; z-index:999; position:relative;">
     <input type="text" id="searchInput" placeholder="Başlık ara..." style="padding: 8px 16px; border-radius: 8px; border: 1px solid #ccc; width: 250px;">
   </div>
-  <div class="lang-toggle">
+  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+  <img src="https://img.icons8.com/ios-filled/50/005b96/train.png" alt="Train Logo" style="width: 48px; height: 48px; margin-right: 10px;">
+  <div class="lang-toggle" style="text-align: right; flex-grow: 1;">
     <button onclick="switchLang('tr')">Türkçe</button>
     <button onclick="switchLang('en')">English</button>
   </div>
+</div>
 
-<div id="en" class="section" style="background-color: white; padding: 20px; border-radius: 12px;">
+
   <h1>Railway Quiz - Privacy Policy</h1>
   <p><strong>Railway Quiz</strong> is a user-friendly mobile application that respects and protects the personal privacy of its users.</p>
   <h2>1. Data Collection</h2>
@@ -105,7 +121,7 @@
   <p><a href="mailto:mkubulay71@yandex.com">📧 Contact Us</a></p>
 </div>
 
-<div id="tr" class="section active" style="background-color: white; padding: 20px; border-radius: 12px;">
+
   <h1>Demir Yolu Bilgi Yarışması - Gizlilik Politikası</h1>
   <p><strong>Demir Yolu Bilgi Yarışması</strong>, kullanıcılarının kişisel gizliliğini koruyan, kullanıcı dostu bir mobil uygulamadır.</p>
   <h2>1. Veri Toplama</h2>
