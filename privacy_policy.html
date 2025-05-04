@@ -35,6 +35,12 @@
       margin: 40px 20px;
       border-radius: 16px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
@@ -90,83 +96,81 @@
       filter: drop-shadow(0 0 2px rgba(0,0,0,0.3));
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 22px;
-      }
-      h2 {
-        font-size: 18px;
-      }
-      .glass {
-        padding: 25px 20px;
-      }
+    .lang-toggle {
+      text-align: center;
+      margin-bottom: 30px;
     }
+
+    .lang-toggle button {
+      background-color: #005b96;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      margin: 0 5px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .lang-toggle button:hover {
+      background-color: #003f6b;
+    }
+
+    .section { display: none; }
+    .section.active { display: block; }
   </style>
 </head>
 <body>
   <div class="glass">
-    <h1>Demir Yolu Bilgi Yarışması - Gizlilik Politikası</h1>
+    <div class="lang-toggle">
+      <button onclick="switchLang('tr')">Türkçe</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
 
-    <p><strong>Demir Yolu Bilgi Yarışması</strong> adlı mobil uygulama, kullanıcıların gizliliğine önem verir. Bu uygulamayı kullanarak aşağıdaki şartları kabul etmiş olursunuz.</p>
+    <div id="tr" class="section active">
+      <h1>Demir Yolu Bilgi Yarışması - Gizlilik Politikası</h1>
+      <p><strong>Demir Yolu Bilgi Yarışması</strong> adlı mobil uygulama, kullanıcıların gizliliğine önem verir...</p>
+      <h2>1. Veri Toplama</h2>
+      <p>Uygulama kullanıcıdan hiçbir kişisel veri toplamaz, işlemez veya saklamaz.</p>
+      <h2>2. Üçüncü Taraf Reklamlar</h2>
+      <p>Uygulama, Google AdMob gibi üçüncü taraf reklam sağlayıcılarının reklamlarını gösterebilir...</p>
+      <h2>3. Güvenlik</h2>
+      <p>Uygulama hiçbir kişisel veri işlemediğinden herhangi bir güvenlik riski bulunmamaktadır.</p>
+      <h2>4. Değişiklikler</h2>
+      <p>Bu gizlilik politikası zaman zaman güncellenebilir...</p>
+      <h2>5. İletişim</h2>
+      <p>Sorular için: <strong>mkubulay71@yandex.com</strong></p>
+    </div>
 
-    <h2>1. Veri Toplama</h2>
-    <p>Uygulama kullanıcıdan hiçbir kişisel veri toplamaz, işlemez veya saklamaz.</p>
-
-    <h2>2. Üçüncü Taraf Reklamlar</h2>
-    <p>Uygulama, Google AdMob gibi üçüncü taraf reklam sağlayıcılarının reklamlarını gösterebilir. Bu hizmetler cihaz tanımlayıcıları gibi bilgileri kullanabilir.</p>
-    <p>Daha fazla bilgi için: <a href="https://policies.google.com/technologies/ads" target="_blank">Google Reklam Hizmetleri Gizlilik Politikası</a></p>
-
-    <h2>3. Güvenlik</h2>
-    <p>Uygulama hiçbir kişisel veri işlemediğinden herhangi bir güvenlik riski bulunmamaktadır.</p>
-
-    <h2>4. Değişiklikler</h2>
-    <p>Bu gizlilik politikası zaman zaman güncellenebilir. Güncellemeler bu sayfada yayınlanacaktır.</p>
-
-    <h2>5. İletişim</h2>
-    <p>Herhangi bir sorunuz varsa bizimle iletişime geçebilirsiniz: <strong>mkubulay71@yandex.com</strong></p>
-
-    <h2>6. Uygulama İzinleri</h2>
-    <p>Bu uygulama cihazınızda çalışmak için herhangi bir özel izin talep etmemektedir.</p>
-
-    <h2>7. Kullanım Koşulları</h2>
-    <p>Bu uygulamayı indirerek, bu gizlilik politikasında belirtilen şartları kabul etmiş sayılırsınız.</p>
-
-    <div class="divider"></div>
-
-    <h1>Privacy Policy</h1>
-
-    <p><strong>Demir Yolu Bilgi Yarışması</strong> is a mobile application that respects your privacy. By using this app, you agree to the following terms:</p>
-
-    <h2>1. Data Collection</h2>
-    <p>This application does not collect, process, or store any personal data from users.</p>
-
-    <h2>2. Third-Party Ads</h2>
-    <p>This app may show advertisements from third-party ad providers (such as Google AdMob). These services may use device identifiers to deliver relevant ads.</p>
-    <p>More info: <a href="https://policies.google.com/technologies/ads" target="_blank">Google Ads Privacy Policy</a></p>
-
-    <h2>3. Security</h2>
-    <p>Since no personal data is processed, there is no security risk related to user information.</p>
-
-    <h2>4. Changes</h2>
-    <p>This privacy policy may be updated. Updates will be posted on this page.</p>
-
-    <h2>5. Contact</h2>
-    <p>If you have any questions, feel free to contact us: <strong>mkubulay71@yandex.com</strong></p>
-
-    <h2>6. App Permissions</h2>
-    <p>This application does not request any special permissions from your device.</p>
-
-    <h2>7. Terms of Use</h2>
-    <p>By downloading and using this app, you agree to the terms described in this privacy policy.</p>
+    <div id="en" class="section">
+      <h1>Demir Yolu Bilgi Yarışması - Privacy Policy</h1>
+      <p><strong>Demir Yolu Bilgi Yarışması</strong> is a mobile application that respects your privacy...</p>
+      <h2>1. Data Collection</h2>
+      <p>This application does not collect, process, or store any personal data from users.</p>
+      <h2>2. Third-Party Ads</h2>
+      <p>The app may show advertisements from third-party ad providers such as Google AdMob...</p>
+      <h2>3. Security</h2>
+      <p>Since no personal data is processed, there is no security risk.</p>
+      <h2>4. Changes</h2>
+      <p>This privacy policy may be updated. Updates will be posted here.</p>
+      <h2>5. Contact</h2>
+      <p>Contact us: <strong>mkubulay71@yandex.com</strong></p>
+    </div>
 
     <div class="footer">
-      &copy; 2025 Demir Yolu Bilgi Yarışması
+      <a href="index.html">Ana Sayfaya Dön</a>
       <div class="youtube-icon">
-        <a href="https://www.youtube.com/@trenvideolari" target="_blank" title="YouTube">
-          <img src="https://img.icons8.com/ios-filled/50/ff0000/youtube-play.png" alt="YouTube">
+        <a href="https://www.youtube.com/@trenvideolari" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/ff0000/youtube-play.png" alt="YouTube" />
         </a>
       </div>
     </div>
   </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
+      document.getElementById(lang).classList.add('active');
+    }
+  </script>
 </body>
 </html>
