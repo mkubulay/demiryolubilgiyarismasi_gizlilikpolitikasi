@@ -9,35 +9,41 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f9f9f9;
       margin: 0;
       padding: 0;
+      min-height: 100vh;
+      background: url("background_trainnn.png") no-repeat center center fixed;
+      background-size: cover;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
       text-align: center;
     }
 
-    .train-icon {
-      margin-top: 20px;
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 40px 20px;
+      border-radius: 12px;
+      max-width: 90%;
+      width: 350px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     .train-icon img {
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
     }
 
     h1 {
       color: #005b96;
-      font-size: 30px;
+      font-size: 26px;
       margin-top: 10px;
     }
 
     p {
-      font-size: 16px;
-      color: #555;
+      font-size: 15px;
+      color: #444;
       margin-bottom: 30px;
     }
 
@@ -45,16 +51,15 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
-      width: 250px;
     }
 
     .buttons a {
       text-decoration: none;
       background-color: #005b96;
       color: white;
-      padding: 12px 24px;
+      padding: 12px 20px;
       border-radius: 8px;
-      font-size: 16px;
+      font-size: 15px;
       transition: background-color 0.3s;
     }
 
@@ -71,27 +76,28 @@
     }
 
     footer {
-      position: absolute;
-      bottom: 10px;
+      margin-top: 30px;
       font-size: 0.8em;
-      color: #aaa;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <div class="train-icon">
-    <img src="https://img.icons8.com/ios-filled/100/005b96/train.png" alt="Tren İkonu">
+  <div class="overlay">
+    <div class="train-icon">
+      <img src="https://img.icons8.com/ios-filled/100/005b96/train.png" alt="Tren İkonu">
+    </div>
+
+    <h1>Demir Yolu Bilgi Yarışması</h1>
+    <p>Bu sayfa yönlendirme amaçlıdır.</p>
+
+    <div class="buttons">
+      <a href="https://play.google.com/store/apps/details?id=paket.adiniz.burada" target="_blank">Google Play'de Aç</a>
+      <a href="privacy_policy.html" target="_blank">Gizlilik Politikası</a>
+      <a href="https://www.youtube.com/@trenvideolari" class="youtube-button" target="_blank">YouTube Kanalı</a>
+    </div>
+
+    <footer>&copy; 2025 Demir Yolu Bilgi Yarışması</footer>
   </div>
-
-  <h1>Demir Yolu Bilgi Yarışması</h1>
-  <p>Bu sayfa yönlendirme amaçlıdır.</p>
-
-  <div class="buttons">
-    <a href="https://play.google.com/store/apps/details?id=paket.adiniz.burada" target="_blank">Google Play'de Aç</a>
-    <a href="https://mkubulay.github.io/demiryolubilgiyarismasi_gizlilikpolitikasi/privacy_policy.html" target="_blank">Gizlilik Politikası</a>
-    <a href="https://www.youtube.com/@trenvideolari" class="youtube-button" target="_blank">YouTube Kanalı</a>
-  </div>
-
-  <footer>&copy; 2025 Demir Yolu Bilgi Yarışması</footer>
 </body>
 </html>
