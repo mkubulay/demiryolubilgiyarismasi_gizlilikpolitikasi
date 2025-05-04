@@ -20,10 +20,19 @@
       text-align: center;
     }
 
+    .train-icon {
+      margin-top: 20px;
+    }
+
+    .train-icon img {
+      width: 100px;
+      height: 100px;
+    }
+
     h1 {
       color: #005b96;
-      font-size: 28px;
-      margin-bottom: 10px;
+      font-size: 30px;
+      margin-top: 10px;
     }
 
     p {
@@ -36,6 +45,7 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
+      width: 250px;
     }
 
     .buttons a {
@@ -52,6 +62,14 @@
       background-color: #003f6b;
     }
 
+    .youtube-button {
+      background-color: #ff0000 !important;
+    }
+
+    .youtube-button:hover {
+      background-color: #cc0000 !important;
+    }
+
     footer {
       position: absolute;
       bottom: 10px;
@@ -61,12 +79,17 @@
   </style>
 </head>
 <body>
+  <div class="train-icon">
+    <img src="https://img.icons8.com/ios-filled/100/005b96/train.png" alt="Tren İkonu">
+  </div>
+
   <h1>Demir Yolu Bilgi Yarışması</h1>
   <p>Bu sayfa yönlendirme amaçlıdır.</p>
 
   <div class="buttons">
-    <a href="https://play.google.com/store/apps/details?id=paket.adiniz.burada" target="_blank">Uygulamayı Google Play'de Aç</a>
-    <a href="https://mkubulay.github.io/demiryolubilgiyarismasi_gizlilikpolitikasi/privacy_policy.html" target="_blank">Gizlilik Politikasını Gör</a>
+    <a href="https://play.google.com/store/apps/details?id=paket.adiniz.burada" target="_blank">Google Play'de Aç</a>
+    <a href="https://mkubulay.github.io/demiryolubilgiyarismasi_gizlilikpolitikasi/privacy_policy.html" target="_blank">Gizlilik Politikası</a>
+    <a href="https://www.youtube.com/@trenvideolari" class="youtube-button" target="_blank">YouTube Kanalı</a>
   </div>
 
   <footer>&copy; 2025 Demir Yolu Bilgi Yarışması</footer>
